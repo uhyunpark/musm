@@ -1,0 +1,20 @@
+{
+  "name": "telegram-agent",
+  "module": "src/index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260301.1",
+    "typescript": "^5.9.3",
+    "wrangler": "^4.69.0"
+  },
+  "dependencies": {
+    "@google/genai": "^1.43.0",
+    "hono": "^4.12.4"
+  }
+}

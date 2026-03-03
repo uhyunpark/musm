@@ -20,11 +20,26 @@ export function parseTelegramUpdate(body: unknown): {
   return { chatId, text, messageId }
 }
 
+export async function sendTypingAction(
+  token: string,
+  chatId: number
+): Promise<void> {
+  await fetch(`https://api.telegram.org/bot${token}/sendChatAction`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ chat_id: chatId, action: 'typing' }),
+  })
+}
+
 export async function sendTelegramMessage(
   token: string,
   chatId: number,
   text: string
 ): Promise<void> {
+  if (!text.trim()) {
+    text = '(빈 응답)'
+  }
+
   const chunks: string[] = []
   for (let i = 0; i < text.length; i += MAX_MESSAGE_LENGTH) {
     chunks.push(text.slice(i, i + MAX_MESSAGE_LENGTH))

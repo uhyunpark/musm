@@ -27,8 +27,8 @@ No test framework is set up yet. Use `bun run typecheck` as the primary verifica
 - `types.ts` — `Tool` and `Skill` interfaces
 - `registry.ts` — `SkillRegistry` class (register, resolve, dispatch)
 - `fetch-url.ts` — standalone URL fetcher with SSRF protection
-- `article-research.ts` — fetch + classify + save articles to Notion
-- `book-management.ts` — search + save books to Notion
+- `notion.ts` — generic Notion API tools (search, create database, create page, query database)
+- `web-research.ts` — fetch URLs and search books (Google Books API)
 - `soul-management.ts` — update system prompt with version history
 
 **Adding a new skill:**
@@ -60,7 +60,7 @@ export const mySkill: Skill = {
 
 ## Secrets (via `bunx wrangler secret put`)
 
-`TELEGRAM_BOT_TOKEN`, `TELEGRAM_WEBHOOK_SECRET`, `GEMINI_API_KEY`, `NOTION_API_KEY`, `NOTION_ARTICLES_DB_ID`, `NOTION_BOOKS_DB_ID`, `ALLOWED_CHAT_IDS`
+`TELEGRAM_BOT_TOKEN`, `TELEGRAM_WEBHOOK_SECRET`, `GEMINI_API_KEY`, `NOTION_API_KEY`, `NOTION_PAGE_ID`, `ALLOWED_CHAT_IDS`
 
 ## Wrangler Setup
 

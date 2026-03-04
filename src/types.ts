@@ -4,7 +4,6 @@ export interface Env {
   TELEGRAM_WEBHOOK_SECRET: string
   GEMINI_API_KEY: string
   NOTION_API_KEY: string
-  NOTION_ARTICLES_DB_ID: string
-  NOTION_BOOKS_DB_ID: string
+  NOTION_PAGE_ID: string
   ALLOWED_CHAT_IDS: string
 }

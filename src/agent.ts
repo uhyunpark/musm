@@ -4,16 +4,16 @@ import { getSoul } from './soul.ts'
 import { loadHistory, saveHistory } from './history.ts'
 import { sendTypingAction } from './telegram.ts'
 import { SkillRegistry } from './skills/registry.ts'
-import { articleResearchSkill } from './skills/article-research.ts'
-import { bookManagementSkill } from './skills/book-management.ts'
+import { notionSkill } from './skills/notion.ts'
+import { webResearchSkill } from './skills/web-research.ts'
 import { soulManagementSkill } from './skills/soul-management.ts'
 
 const MAX_AGENT_TURNS = 10
 
 function createRegistry(): SkillRegistry {
   const registry = new SkillRegistry()
-  registry.register(articleResearchSkill)
-  registry.register(bookManagementSkill)
+  registry.register(notionSkill)
+  registry.register(webResearchSkill)
   registry.register(soulManagementSkill)
   return registry
 }

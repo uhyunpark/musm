@@ -1,6 +1,6 @@
 # musm
 
-Telegram personal assistant running on Cloudflare Workers. Uses Gemini Flash for agentic tool-use with Notion as the backend store. Responds in Korean.
+MUch SiMplified personal assistant running on Cloudflare Workers. Uses Gemini Flash for agentic tool-use with Notion as the backend store. Responds in Korean.
 
 ## Features
 
